@@ -13,7 +13,7 @@ func GenerateImportsAfterSetupStage(imageBaseConfig *config.StapelImageBase, bas
 
 func newImportsAfterSetupStage(imports []*config.Import, baseStageOptions *NewBaseStageOptions) *ImportsAfterSetupStage {
 	s := &ImportsAfterSetupStage{}
-	s.ImportsStage = newImportsStage(imports, ImportsAfterSetup, baseStageOptions)
+	s.ImportsStage = newImportsStage(imports, DependenciesAfterSetup, baseStageOptions)
 	return s
 }
 
